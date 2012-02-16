@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <kwetal translate="label" module="cacheclean">
+            <label>Kwetal</label>
+            <sort_order>160</sort_order>
+        </kwetal>
+    </tabs>
+    <sections>
+        <kwetal_cache translate="label" module="cacheclean">
+            <label>Cache</label>
+            <tab>kwetal</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>40</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>0</show_in_website>
+            <show_in_store>0</show_in_store>
+            <groups>
+                <cache_clean translate="label">
+                	<comment><![CDATA[<br />
+                        <div class="box">
+                            <p>
+                            	Cron Expression Format: minute hour day-of-month month day-of-week<br />
+								Supports: * 0-5,10-59/5 2-10,15-25 january-june/2 mon-fri<br />
+								Leave empty to disable
+							</p>
+                        </div>
+                        ]]>
+                    </comment>
+                    <label>Cache Clean Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <types translate="label">
+                            <label>Cache Types</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>cacheclean/source::getCacheTypes</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </types>
+                        <cron_clean_tags translate="label comment">
+                        	<label>Clean Specific Tags</label>
+                        	<comment><![CDATA[Cron Expression]]></comment>
+                        	<frontend_type>text</frontend_type>
+                        	<sort_order>20</sort_order>
+                        	<backend_model>cacheclean/observer_cron</backend_model>
+                        	<show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </cron_clean_tags>
+                        <cron_clean_old translate="label comment">
+                        	<label>Clean Old Tags</label>
+                        	<comment><![CDATA[Cron Expression]]></comment>
+                        	<frontend_type>text</frontend_type>
+                        	<sort_order>30</sort_order>
+                        	<show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </cron_clean_old>
+                    </fields>
+                </cache_clean>
+        	</groups>
+    	</kwetal_cache>
+	</sections>
+</config>
+                

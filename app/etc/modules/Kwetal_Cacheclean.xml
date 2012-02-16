@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Kwetal_Cacheclean>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Kwetal_Cacheclean>
+    </modules>
+</config>

@@ -1,0 +1,12 @@
+Linux only for the moment.
+
+The Magento cache can speed up your system, but it has it's pittfalls. One of them being that the lookup can 
+actually slow down your system if you have a lot of entries. A periodic cleanup can do wonders in that case. From this 
+need I created this module that currently let's you set up two cronjobs from the admin area to manage your cache entries.
+
+You can set a cronjob to cleanup specific cache tags. Useful if you have a security scan running that leaves your cache
+cluttered with thousands of entries.
+
+Then there is a cronjob that removes entries that have expired, something that Magento does not bother to do.
+
+For full benifit install Aoe_Scheduler (https://github.com/fbrnc/Aoe_Scheduler)
